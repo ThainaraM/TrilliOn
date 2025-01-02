@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórum</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .topic {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        .topic:last-child {
+            border-bottom: none;
+        }
+        .topic-title {
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .topic-details {
+            color: #555;
+            font-size: 0.9em;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fórum de Discussão</h1>
+
+        <!-- Lista de tópicos -->
+        <div id="topics">
+            <div class="topic">
+                <p class="topic-title">duvidas</p>
+                <p class="topic-details">Consigo fazer a portabilidade da minha conta em outro banco?</p>
+            </div>
+            <div class="topic">
+                <p class="topic-title">conta</p>
+                <p class="topic-details">tem banco fisico ?</p>
+            </div>
+        </div>
+
+        <!-- Formulário para adicionar um novo tópico -->
+        <form id="newTopicForm">
+            <input type="text" id="topicTitle" placeholder="Título do tópico" required>
+            <textarea id="topicContent" rows="4" placeholder="Detalhes do tópico" required></textarea>
+            <button type="submit">Adicionar Tópico</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('newTopicForm');
+        const topicsDiv = document.getElementById('topics');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const title = document.getElementById('topicTitle').value;
+            const content = document.getElementById('topicContent').value;
+
+            const newTopic = document.createElement('div');
+            newTopic.classList.add('topic');
+            newTopic.innerHTML = `
+                <p class="topic-title">${title}</p>
+                <p class="topic-details">${content}</p>
+            `;
+
+            topicsDiv.appendChild(newTopic);
+
+            form.reset();
+        });
+    </script>
+</body>
+</html>

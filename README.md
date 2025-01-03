@@ -20,7 +20,7 @@ Preto: Cor da letra principal, garantindo legibilidade.
 
 Clone este repositório:
 
-git clone https://github.com/ThainaraM/.git
+git clone https://github.com/ThainaraM/TrilliOn.git
 
 Abra o arquivo index.html em seu navegador preferido.
 

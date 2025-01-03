@@ -4,9 +4,17 @@ Bem-vindo ao repositório do Trillion Finance! Este é um projeto de site financ
 
 <h2>Paleta de Cores</h2>
 
-A identidade visual da loja utiliza as seguintes cores:
+A identidade visual do site utiliza as seguintes cores:
 
+Amarelo: Para destaques e elementos chamativos.
 
+Cinza: Tons claros e escuros para fundo e divisões.
+
+Branco: Fundo principal e espaços negativos.
+
+Azul: Cor dos botões para contrastar com o restante do design.
+
+Preto: Cor da letra principal, garantindo legibilidade.
 
 <h2>Como Visualizar o Projeto</h2>
 
